@@ -46,16 +46,6 @@
             </form>
 
           
-
-            <table class="table table-striped">
-
-                <tr class="table-dark">
-                    <th>FIRST NAME</th>
-                    <th>LAST NAME</th>
-                    <th>EMAIL</th>
-                    <th>DELETE</th>
-                </tr>
-
             <?php
             $servername = "localhost";
             $username = "root";
@@ -73,7 +63,16 @@
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
-            // output data of each row
+            // output data of each row            <table class="table table-striped">
+                ?>
+            <table class="table table-striped">
+                <tr class="table-dark">
+                <th>FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>DELETE</th>
+                </tr>
+            <?php
             while($row = mysqli_fetch_assoc($result)) {
                 ?>
 
